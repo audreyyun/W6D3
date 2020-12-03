@@ -2,3 +2,179 @@
   ↳ bin/rails:9
   [1m[35m (52.7ms)[0m  [1m[35mCREATE DATABASE "project1_test" ENCODING = 'unicode'[0m
   ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2020-12-03 10:56:57 -0800
+
+ActiveRecord::NoDatabaseError - FATAL:  database "project1_development" does not exist:
+
+Started POST "/__better_errors/5964b8d52e33113f/variables" for 127.0.0.1 at 2020-12-03 10:56:58 -0800
+Started GET "/" for ::1 at 2020-12-03 10:57:20 -0800
+
+ActiveRecord::NoDatabaseError - FATAL:  database "project1_development" does not exist:
+
+Started POST "/__better_errors/008831975e26b4ae/variables" for ::1 at 2020-12-03 10:57:21 -0800
+Started GET "/" for ::1 at 2020-12-03 11:07:28 -0800
+
+ActiveRecord::NoDatabaseError - FATAL:  database "project1_development" does not exist:
+
+Started GET "/users" for ::1 at 2020-12-03 11:08:48 -0800
+
+ActiveRecord::NoDatabaseError - FATAL:  database "project1_development" does not exist:
+
+  [1m[35m (765.1ms)[0m  [1m[35mCREATE DATABASE "project1_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (344.0ms)[0m  [1m[35mCREATE DATABASE "project1_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+Started GET "/users" for ::1 at 2020-12-03 11:10:24 -0800
+
+ArgumentError - Before process_action callback :verify_authenticity_token has not been defined:
+  app/controllers/application_controller.rb:3:in `<class:ApplicationController>'
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:1:in `<top (required)>'
+
+Started GET "/users" for ::1 at 2020-12-03 11:16:15 -0800
+
+AbstractController::ActionNotFound - The action 'index' could not be found for UsersController:
+
+Started GET "/users" for ::1 at 2020-12-03 11:17:26 -0800
+Processing by UsersController#index as */*
+No template found for UsersController#index, rendering head :no_content
+Completed 204 No Content in 7951ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2020-12-03 11:25:36 -0800
+Processing by UsersController#index as */*
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 173ms (Views: 150.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users?favorite_food=pizza" for ::1 at 2020-12-03 11:27:42 -0800
+Processing by UsersController#index as */*
+  Parameters: {"favorite_food"=>"pizza"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favorite_food=pizza" for ::1 at 2020-12-03 11:28:41 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/favorite_food=pizza"):
+  
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/favorite_food=pizza" for ::1 at 2020-12-03 11:28:57 -0800
+
+AbstractController::ActionNotFound - The action 'show' could not be found for UsersController:
+
+Started GET "/users/" for ::1 at 2020-12-03 11:29:12 -0800
+Processing by UsersController#index as */*
+  Rendering text template
+  Rendered text template (0.1ms)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/" for ::1 at 2020-12-03 11:30:05 -0800
+
+AbstractController::ActionNotFound - The action 'create' could not be found for UsersController:
+
+Started POST "/users/" for ::1 at 2020-12-03 11:30:45 -0800
+Processing by UsersController#create as */*
+Completed 200 OK in 13ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/?favorite_food=pizza" for ::1 at 2020-12-03 11:31:07 -0800
+Processing by UsersController#create as */*
+  Parameters: {"favorite_food"=>"pizza"}
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/2" for ::1 at 2020-12-03 11:33:54 -0800
+
+AbstractController::ActionNotFound - The action 'show' could not be found for UsersController:
+
+Started GET "/users/2" for ::1 at 2020-12-03 11:34:41 -0800
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/2" for ::1 at 2020-12-03 11:47:42 -0800
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+Completed 200 OK in 6ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users?some_category[a_key]=another+value&some_category[a_second_key]=yet+another+value%27" for ::1 at 2020-12-03 11:48:21 -0800
+Processing by UsersController#index as */*
+  Parameters: {"some_category"=>{"a_key"=>"another value", "a_second_key"=>"yet another value'"}}
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users?some_category[a_key]=another+value&some_category[a_second_key]=yet+another+value%27" for ::1 at 2020-12-03 11:49:55 -0800
+Processing by UsersController#index as */*
+  Parameters: {"some_category"=>{"a_key"=>"another value", "a_second_key"=>"yet another value'"}}
+  Rendering text template
+  Rendered text template (0.1ms)
+Completed 200 OK in 22ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2020-12-03 11:50:17 -0800
+Processing by UsersController#index as */*
+  Rendering text template
+  Rendered text template (0.1ms)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2020-12-03 11:52:26 -0800
+Processing by UsersController#index as */*
+  Rendering text template
+  Rendered text template (0.2ms)
+Completed 200 OK in 775ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-03 11:53:28 -0800
+Processing by Rails::WelcomeController#index as */*
+  Rendering /Users/pk/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/pk/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb (40.1ms)
+Completed 200 OK in 1895ms (Views: 829.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2020-12-03 11:53:41 -0800
+Processing by UsersController#index as */*
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 6ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2020-12-03 11:59:43 -0800
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+        bin/rails db:migrate RAILS_ENV=development:
+
