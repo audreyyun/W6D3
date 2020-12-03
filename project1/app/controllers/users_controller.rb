@@ -11,4 +11,11 @@ class UsersController < ApplicationController
     def show 
         render json: params
     end
+    
+    private 
+
+    def user_params
+        
+    end
 end
+
